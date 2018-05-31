@@ -9,6 +9,9 @@
 
 <ul>
   <% @artist.songs.each do |song| %>
-    <li><%= song.name song.rating %></li>
+    <li>
+      <%= link_to song.name, artist_song_path(@artist, song) %>
+      <%= song.rating %>
+    </li>
   <% end %>
 </ul>
