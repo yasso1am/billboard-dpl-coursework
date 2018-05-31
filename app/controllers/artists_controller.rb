@@ -21,7 +21,7 @@ class ArtistsController < ApplicationController
     @artist = Artist.new(artist_params)
 
     if @artist.save
-      redirect_to @artist
+      redirect_to @artist #INSERT CORRECT PATH
     else
       render :form
     end
@@ -29,7 +29,7 @@ class ArtistsController < ApplicationController
 
   def update
     if @artist.update(arist_params)
-      redirect_to @artist
+      redirect_to @artist#INSERT CORRECT PATH
     else
       render :form
     end
@@ -37,7 +37,7 @@ class ArtistsController < ApplicationController
 
   def destroy
     @artist.destroy
-    redirect_to artists_path
+    redirect_to artists_path #INSERT CORRECT PATH
   end
 
   private
