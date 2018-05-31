@@ -1,5 +1,5 @@
 <h1> <%= @song.id ? "Edit #{@song.name}" : "Add A Song" %> </h1>
-<hr />
+<hr/>
 
 <%= form_for [@artist, @song] do |f| %>
   <%= f.label :name %>
