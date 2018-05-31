@@ -10,11 +10,11 @@ class SongsController < ApplicationController
 
   def new
     @song = @artist.songs.new
-    render partial: "form"
+    render: form
   end
 
   def edit
-    render partial: "form"
+    render: form
   end
 
   def create
@@ -35,4 +35,8 @@ class SongsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @song.destroy
+    redirect_to artist_songs_path
 end
