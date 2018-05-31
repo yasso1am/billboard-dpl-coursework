@@ -7,4 +7,4 @@
 <hr />
 <button> <%= link_to 'Edit Song', edit_artist_song_path(@artist, @song) %> </button>
 <button> <%= link_to 'Delete Song', [@artist, @song], method: :delete %> </button>
-<button> <%= link_to 'Back', artists_path %> </button>
+<button> <%= link_to 'Back', artist_path(@artist) %> </button>
