@@ -2,13 +2,13 @@
 <h2><%=@artist.name%></h1> 
 <h2><%=@song.name%></h2>
   <ul>
-  <% @artist.songs.each do |item| %>
+  <% @artist.songs.each do |song| %>
   <li>
     <%= link_to song.name, artist_song_path(@artist, song) %>
     </li>
     <% end %>
   </ul>
 <hr />
-<button> <%= link_to 'Edit Song', edit_song_path(@board) %> </button>
+<button> <%= link_to 'Edit Song', edit_artist_song_path(@artist, @song) %> </button>
 <button> <%= link_to 'Delete Song', [@artist, @song], method: :delete %> </button>
 <button> <%= link_to 'Back', artists_path %> </button>

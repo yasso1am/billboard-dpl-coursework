@@ -1,12 +1,12 @@
 <h1> <%= @song.id ? "Edit #{@song.name}" : "Add A Song" %> </h1>
 <hr />
 
-<%= form_for @song do |f| %>
+<%= form_for [@artist, @song] do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name, required: true, autofocus: true %>
   
   <%= f.label :rating %>
-  <%= f.num_field :rating, required: true, autofocus: true %>
+  <%= f.text_field :rating, required: true, autofocus: true %>
   
   <br />
   <%= f.submit %>
