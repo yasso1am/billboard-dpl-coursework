@@ -3,3 +3,12 @@
 <%= link_to 'Edit Artist', edit_artist_path(@artist.id) %>
 <%= link_to 'Delete Artist', artist_path(@artist), method: :delete %>
 <%= link_to 'Back to all artists', artists_path %>
+
+<hr/>
+<h2><%= @artist.name%>'s Songs</h2>
+
+<ul>
+  <% @artist.songs.each do |song| %>
+    <li><%= render 'songs/song', { song: song } %></li>
+  <% end %>
+</ul>
