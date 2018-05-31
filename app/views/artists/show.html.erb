@@ -9,6 +9,6 @@
 
 <ul>
   <% @artist.songs.each do |song| %>
-    <li><%= artist_songs_path(@artist) %></li>
+    <li><%= song.name %></li>
   <% end %>
 </ul>
