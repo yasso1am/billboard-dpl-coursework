@@ -2,9 +2,9 @@
 <%= link_to 'Add a song to the board!', new_board_song_path(@board) %>
 <hr />
   <ul>
-  <% @board.songs.each do |item| %>
+  <% @board.artists.each do |artist| %>
   <li>
-    <%= link_to song.name, board_song_path(@board, song) %>
+    <%= link_to artist.name, board_songs_path(@board) %>
     </li>
     <% end %>
   </ul>
