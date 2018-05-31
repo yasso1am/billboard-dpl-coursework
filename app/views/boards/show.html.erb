@@ -4,7 +4,7 @@
   <ul>
   <% @board.artists.each do |artist| %>
   <li>
-    <%= link_to artist.name, board_songs_path(@board) %>
+    <%= link_to artist.name, artist_songs_path(artist) %>
     </li>
     <% end %>
   </ul>
