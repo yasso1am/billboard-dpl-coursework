@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'static#home'
+  root 'staticpages#home'
 
   resources :boards do
     resources :artists
