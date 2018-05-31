@@ -1,4 +1,4 @@
 class Board < ApplicationRecord
-  # has_many :artists
-  has_many :songs
+  has_many :artists, dependent: :nullify
+  has_many :songs, dependent: :nullify
 end

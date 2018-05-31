@@ -1,2 +1,14 @@
-<h1>Boards#show</h1>
-<p>Find me in app/views/boards/show.html.erb</p>
+<h1> <%= @board.name %> </h1>
+<%= link_to 'Add a song to the board!', new_board_song_path(@board) %>
+<hr />
+  <ul>
+  <% @board.songs.each do |item| %>
+  <li>
+    <%= link_to song.name, board_song_path(@board, song) %>
+    </li>
+    <% end %>
+  </ul>
+<hr />
+<button> <%= link_to 'Edit Board Name', edit_board_path(@board) %> </button>
+<button> <%= link_to 'Delete Board', @board, method: :delete %> </button>
+<button> <%= link_to 'Back', boards_path %> </button>

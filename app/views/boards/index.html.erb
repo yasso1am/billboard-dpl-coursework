@@ -1,2 +1,14 @@
-<h1>Boards#index</h1>
-<p>Find me in app/views/boards/index.html.erb</p>
+<h1> Click to view a Board </h1>
+<%= link_to "Create New Board", new_board_path %>
+<br />
+<br />
+<hr />
+
+<ul>
+  <% @boards.each do |board| %>
+    <li>
+      <%= link_to board.name, board %> <!-- board is equal to board_path(board.id) -->
+    </li>
+    <% end %>
+  </ul>
+<hr />
