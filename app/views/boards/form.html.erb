@@ -1,4 +1,4 @@
-<h1> <%= @board.id ? "Edit #{@board}" : "Create New Board" %> </h1>
+<h1> <%= @board.id ? "Edit #{@board.name}" : "Create New Board" %> </h1>
 <hr />
 
 <%= form_for @board do |f| %>
