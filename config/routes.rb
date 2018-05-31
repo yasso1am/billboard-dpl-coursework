@@ -1,3 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  root 'static#home'
+
+  resources :boards do
+    resources :artists
+    resources :songs
+  end
+  
+  # scope 'artists/:artist_id', as: 'artist' do
+  #   resources :songs, only: [:new, :create]
+  # end
+
 end
