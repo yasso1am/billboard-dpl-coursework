@@ -20,22 +20,27 @@ class BoardsController < ApplicationController
   def create
     @board = Board.new(board_params)
       if @board.save
+        flash[:success] = 'Board Created'
         redirect_to @board
       else
+        flash[:error] = "Error: #{@board.errors.full_messages.join("\n")}"
         render :form
       end
   end
 
   def update
     if @board.update(board_params)
+      flash[:success] = 'Board Updated'
       redirect_to @board
     else
+      flash[:error] = "Error: #{@board.errors.full_messages.join("\n")}"
       render :form
     end
   end
 
   def destroy
     @board.destroy
+    flash[:success] = 'Away with you board'
     redirect_to boards_path
   end
 
