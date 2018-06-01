@@ -2,7 +2,9 @@
 <%= link_to 'Create New Artist', new_artist_path %>
 <hr/>
 <% @artists.each do |artist| %>
-  <br/>
-  <%= artist.name %>
-  <%= link_to 'View artist', artist_path(artist.id)%>
+  <ul>
+    <li><%= artist.name %>
+      <%= link_to 'View artist', artist_path(artist.id)%>
+    </li>
+  </ul>
 <% end %>
