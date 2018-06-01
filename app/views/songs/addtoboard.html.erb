@@ -1,2 +1,15 @@
 
+<h1> Here are all the songs! </h1>
+<ul>
+<% @songs.each do |song| %>
+ <li>
+ <%= Artist.find(song.artist_id).name %>
+ <%= link_to song.name, artist_path(song.artist_id) %>
+ <%= link_to 'Add to Board', board_songs_addtoboard_path(@board.id, song.id) %>
 
+
+ </li>
+  <% end %>
+ </ul>
+
+@artists
