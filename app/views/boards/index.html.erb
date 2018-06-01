@@ -7,8 +7,18 @@
 <ul>
   <% @boards.each do |board| %>
     <li>
-      <%= link_to board.name, board %> <!-- board is equal to board_path(board.id) -->
+      <div class="ui celled list">
+        <div class="item">
+          <div class="content">
+            <div class="header">
+            </div>
+            <%= link_to board.name, board %> <!-- board is equal to board_path(board.id) -->
+            </div>
+          </div>
+        </div>
+      </div>
     </li>
     <% end %>
   </ul>
 <hr />
+
