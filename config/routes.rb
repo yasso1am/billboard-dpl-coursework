@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   
   get 'songs/all'
 
+  get 'songs/addtoboard'
+
   scope 'artists/:artist_id', as: 'artist' do
     resources :songs, only: [:new, :create]
   end

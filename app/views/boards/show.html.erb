@@ -1,12 +1,11 @@
 <h1> Board: <%= @board.name %> </h1>
-<%= link_to 'Add a song to the board!', new_board_song_path(@board) %>
+<%= link_to 'Add a song to the board!', songs_addtoboard_path(@board) %>
 <hr />
 <h3> Songs </h3>
   <ul>
   <% @board.songs.each do |song| %>
   <li>
-    <%= song.name %>
-    <%= song.rating %>
+   <%= data %>
     </li>
     <% end %>
   </ul>

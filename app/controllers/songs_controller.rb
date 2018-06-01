@@ -1,9 +1,10 @@
 class SongsController < ApplicationController
-  before_action :set_artist, except: [:all]
+  before_action :set_artist, except: [:all, :addtoboard]
   before_action :set_song, only: [:show, :edit, :update, :destroy]
 
   def all
     @songs = Song.all
+    @artists = Artist.all
   end
 
 
