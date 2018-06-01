@@ -13,7 +13,7 @@
 
 
   20.times do
-    artist = board.artists.create(
+    artist = Artist.create(
       name: Faker::RockBand.name
     )
 

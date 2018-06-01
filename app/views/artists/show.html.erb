@@ -6,7 +6,7 @@
 
 <hr/>
 <h2><%= @artist.name%>'s Songs</h2>
-<%= link_to 'add new song', new_artist_song_path(@artist) %>
+<%= link_to 'Add New Song', new_artist_song_path(@artist) %>
 
 <ul>
   <% @artist.songs.each do |song| %>
