@@ -10,10 +10,10 @@ Rails.application.routes.draw do
     resources :songs
   end
   
-  get 'songs/index'
+  get 'songs/all'
 
   scope 'artists/:artist_id', as: 'artist' do
-    resources :songs, only: [:new, :create,]
+    resources :songs, only: [:new, :create]
   end
 
 end
